@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Detailed Information</title>
+  <link id="pagestyle" type="text/css" rel="stylesheet" href="page2.css">
+  <!-- accessibility -->
+  <link type="text/css" rel="stylesheet" href="accessibility.css">
+  <!-- JS for switching accesibility -->
+  <script type="text/javascript">
+  function swapStyleSheet(sheet)
+  {
+    document.getElementById("pagestyle").setAttribute('href', sheet);
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <!-- button for accesibility -->
+    <a href="#openModal">Accessibility</a>
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Accessibility</h2>
+        <button onclick="swapStyleSheet('page2.css')">Normal Style</button>
+        <button onclick="swapStyleSheet('black_white_for_page2.css')">Black White Style</button>
+        <p>Working on more accessibility options</p>
+      </div>
+    </div>
+  </header>
+  <div class="bg"></div>
+<!-- information -->
+  <div>
+    <section class="column">
+      <h2 id="personalstatement">Personal Statement</h2>
+      <p>ultra over perfect grades in both Maths and IT, 150%</p>
+    </section>
+
+    <section class="column">
+      <h2 id="personalskills">Personal Skills</h2>
+      <!-- list for skills -->
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </section>
+
+    <section class="column">
+      <h2 id="careereducationhistory">Career & Education History</h2>
+      <!-- education places -->
+      <h4>Education:</h4>
+      <ul>
+        <strong>
+          <li>Robert Gordon University - Aberdeen</li>
+        </strong>
+        <p>Studying Computer Science since 99.9999</p>
+        <strong>
+          <li>Secondary school qualification</li>
+        </strong>
+        <p>Somewhere</p>
+        <strong>
+          <li>additional qualification</li>
+        </strong>
+        <p>Somewhere</p>
+      </ul>
+    </section>
+
+    <!-- work places -->
+    <section class="column">
+      <h2 id="employmenthistory">Employment History</h2>
+      <ul>
+        <strong>
+          <li>Worked here</li>
+        </strong>
+        <p>worked 999hours per week, gave me 1£ for 1 hour</p>
+        <strong>
+          <li>Worked here</li>
+        </strong>
+        <p>The best work place ever, gave me 99£ for 1 hour</p>
+      </ul>
+    </section>
+
+    <!-- Things that interest me -->
+    <section class="column">
+      <h2 id="personalinterest">Personal Interests</h2>
+      <p>I am interested in you. :)</p>
+    </section>
+  </div>
+  <!-- Link to going back to main page -->
+  <footer>
+    <a href="Page1.html">Click here to go to <strong>Main</strong> page</a>
+  </footer>
+</body>
+</html>

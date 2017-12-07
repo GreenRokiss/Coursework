@@ -1,0 +1,106 @@
+/* change whole pages margins and paddings and that it will take 100% of users screen */
+body
+{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+html
+{
+  margin: 0px;
+  padding: 0px;
+}
+/* header position, padding from left, background color yellow */
+header
+{
+  background-color: #FFFF00;
+  display: flex;
+  position: relative;
+  padding-left: 30%;
+  line-height: 1;
+}
+/* background for header */
+#background
+{
+  color: #85144b;
+}
+/* change that it will stay on right and width of it */
+#container1
+{
+  width: 30%;
+  background-color: #FFFF00;
+  color: #85144b;
+  order: 1;
+}
+/* change that it will stay on left */
+#container2
+{
+  order: 2;
+}
+/* to make header height equal to pictures height, so it will look better */
+img
+{
+  display: block;
+}
+/* that content in main(table in this scenario), would stay in
+middle of the page and change background color to green */
+main
+{
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  background-color: #01FF70;
+}
+/* table fonts size and padding from header to table, remove padding on bottom */
+table
+{
+  font-size: 22px;
+  padding-top: 5%;
+  padding-bottom: 0;
+}
+/* borders color of the table, background of the table white */
+th, td
+{
+  border: 1px solid black;
+  background-color: white;
+}
+/* link text color */
+a:link
+{
+  color: magenta;
+}
+/* visited link text color */
+a:visited
+{
+  color: magenta;
+}
+/* Full name of user to appear 25% of all the header height and margins 0 */
+#name
+{
+  padding-top: 25%;
+  margin: 0;
+}
+/* no margin bellow "Contact Details:" */
+#contact
+{
+  margin-bottom: 0;
+}
+/* list of contact details, that it would be padded 15% from header start point,
+also no margins in top */
+#topul
+{
+  margin-top: 0;
+  padding-left: 15%;
+}
+/* footer looks, background color red, to stay always at the bottom of the screen, setting height */
+footer
+{
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  background-color: red;
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  height: 26%;
+}

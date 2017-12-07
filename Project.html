@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+</head>
+<body>
+  <!-- still working on it, alerts! -->
+  <font size = "20">
+    <h2 style="text-align:center;">In Progress!</h2>
+    <p style="text-align:center;">But you can try it out :)</p>
+  </font>
+  <!-- JS, buttons and other things to link html to JS, code to make it rotate, spin, give back values etc.
+  still working on it, but please check it out :), I think there are easier ways to do it :D -->
+  <input type="button" value="SPIN" style="float:left;" id="clickMe" />
+  <!-- canvas on where to draw my roulette -->
+  <canvas id="canvas" width="800" height="450"></canvas>
+  <script>
+  var options = [0, 1, 8, 2, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 14, 0, 1, 8, 2, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 14];
+  var colour = ['green', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'green',  'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue', 'yellow', 'blue'];
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  //draw rectangles + colour + numbers
+  function Draw(slide)
+  {
+     //draws all the rectangles in right colours and puts numbers in it.
+    for(var i = 0; i < options.length; i++)
+    {
+      ctx.fillStyle = colour[i];
+      ctx.fillRect(75*i,100,75-slide,75);
+      ctx.fillStyle = "black";
+      ctx.font = "12pt Verdana";
+      ctx.fillText(parseInt(options[i]), 30 + 75*i-slide, 140);
+    }
+    //draw rectangles ends
+    //Arrow, pointer
+    ctx.beginPath();
+    ctx.lineWidth="5";
+    ctx.strokeStyle="black";
+    ctx.moveTo(185,100);
+    ctx.lineTo(185,175);
+    ctx.stroke();
+  }
+  //------------------------------------------------------------------
+  /* when you press "spin" button it does this, I think when i double click the button it gets bugged or my code is buggy.*/
+  function Spin()
+  {
+    var xslide = Math.floor((Math.random()*1126));
+    ctx.font = "12pt Verdana";
+    for(var i = 0; i < options.length; i++)
+    {
+      ctx.fillStyle = colour[i];
+      ctx.fillRect(75*i,100,75-xslide,75);
+      ctx.fillStyle = "black";
+      ctx.fillText(parseInt(options[i]), 30 + 75*(i+1)-xslide, 140);
+    }
+    //draw rectangles ends
+    //Arrow, pointer
+    ctx.beginPath();
+    ctx.lineWidth="5";
+    ctx.strokeStyle="black";
+    ctx.moveTo(185,100);
+    ctx.lineTo(185,175);
+    ctx.stroke();
+  }
+  // this is what he does at the start of the JS
+  var temp = 0;
+  Draw(temp);
+  document.getElementById("clickMe").onclick = Spin;
+  </script>
+  <!-- make return to main page button + css inside of html not in seperate file -->
+  <footer>
+    <style media="screen">
+    /*colors link text*/
+    a:link
+    {
+      color: cyan;
+    }
+    /*colors visited link text, so it wont change color after pressing once*/
+    a:visited
+    {
+      color: cyan;
+    }
+    /*to stay at the bottom of the screen*/
+    footer
+    {
+      font-size: 30px;
+      position:absolute;
+      bottom: 30px;
+    }
+    </style>
+    <!-- the button i was talking about -->
+    <a href="Page1.html">Click here to go to <strong>Main</strong> page</a>
+  </footer>
+
+</body>
+</html>

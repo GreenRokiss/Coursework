@@ -1,0 +1,42 @@
+/* Style all font icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+/* Add a hover effect*/
+.fa:hover {
+    opacity: 0.7;
+}
+/* Facebook */
+.fa-facebook {
+    background: #3B5998 !important;
+    color: white !important;
+}
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE !important;
+    color: white !important;
+}
+/* Youtube */
+.fa-youtube
+{
+    background: #cc181e !important;
+    color: white !important;
+}
+
+/* Everything below same as master.css */
+#left
+{
+  position: absolute;
+  right: 30px;
+
+}
+.column
+{
+  float: left;
+  width: 50%;
+}
